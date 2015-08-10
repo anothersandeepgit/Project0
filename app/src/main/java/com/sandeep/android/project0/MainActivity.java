@@ -9,8 +9,8 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
 
-
-public class MainActivity extends Activity implements OnClickListener {
+public class MainActivity extends Activity {
+//public class MainActivity extends Activity implements OnClickListener {
 
     Button button_spotify;
     Button button_scores;
@@ -32,15 +32,23 @@ public class MainActivity extends Activity implements OnClickListener {
         button_xyz = (Button) findViewById(R.id.button_xyz);
         button_capstone = (Button) findViewById(R.id.button_capstone);
 
-        button_spotify.setOnClickListener(this);
-        button_scores.setOnClickListener(this);
-        button_library.setOnClickListener(this);
-        button_build.setOnClickListener(this);
-        button_xyz.setOnClickListener(this);
-        button_capstone.setOnClickListener(this);
+        //button_spotify.setOnClickListener(this);
+        //button_scores.setOnClickListener(this);
+        //button_library.setOnClickListener(this);
+        //button_build.setOnClickListener(this);
+        //button_xyz.setOnClickListener(this);
+        //button_capstone.setOnClickListener(this);
 
     }
+    public void showToast(View v) {
+        String toastString = "Without anonymous class this button will launch ";
+        Button clicked_button = (Button) v;
+        String name = clicked_button.getText().toString().toLowerCase();
+        toastString += name + "!";
+        Toast.makeText(getApplicationContext(), toastString, Toast.LENGTH_SHORT).show();
+    }
 
+    /*
     public void onClick(View v) {
         String toastString = "This button will launch ";
         if (v == button_spotify) {
@@ -91,4 +99,5 @@ public class MainActivity extends Activity implements OnClickListener {
 
         return super.onOptionsItemSelected(item);
     }
+    */
 }

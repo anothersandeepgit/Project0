@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="background_color" type="color">#99FFCC</item>
+    <item name="myapp_button_color" type="color">#990033</item>
+    <item name="myapp_text_color" type="color">#ffffff</item>
+    <item name="button_color" type="color">#F08C35</item>
+</resources>
